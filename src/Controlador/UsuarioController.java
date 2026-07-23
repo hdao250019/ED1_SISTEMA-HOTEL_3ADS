@@ -7,6 +7,9 @@ package Controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import Vistas.*;
+import Modelos.*;
+import javax.swing.JFrame;
 
 /**
  *
@@ -14,13 +17,13 @@ import javax.swing.JOptionPane;
  */
 public class UsuarioController implements ActionListener{
     private FrmInicioSesion vistaLogin;
-    private UsuarioBD usuariobd;
-    private MainFrm menu;
+    private UsuarioDB usuariobd;
+    private JFrame menu;
     private int contadorLogin = 0;
     
 
     // Constructor
-    public LoginController(FrmInicioSesion vistaLogin, UsuarioBD usuariobd, MainFrm menu) {
+    public UsuarioController(FrmInicioSesion vistaLogin, UsuarioDB usuariobd, JFrame menu) {
         this.vistaLogin = vistaLogin;
         this.usuariobd = usuariobd;
         this.menu = menu;
@@ -50,8 +53,8 @@ public class UsuarioController implements ActionListener{
 
         if (usuarioValidado != null) {
             
-            SesionAct.setUsuarioActual(usuarioValidado);
-            JOptionPane.showMessageDialog(vistaLogin, "¡Bienvenido de nuevo, " + usuarioValidado.getUsuario()+ "!");
+            //SesionAct.setUsuarioActual(usuarioValidado);
+            //JOptionPane.showMessageDialog(vistaLogin, "¡Bienvenido de nuevo, " + usuarioValidado.getNombre(), "!");
 
             
             menu.setLocationRelativeTo(null);
