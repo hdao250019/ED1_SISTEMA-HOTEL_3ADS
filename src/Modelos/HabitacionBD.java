@@ -5,6 +5,7 @@
 package Modelos;
 
 import Controlador.Conection;
+import Modelos.Habitacion;
 import java.sql.Connection;
 import java.sql.*;
 import java.util.ArrayList;
@@ -49,7 +50,7 @@ public class HabitacionBD {
     //Metodo para consultar todas las Habitaciones
     public List<Habitacion> consultarHabitaciones(){
         List<Habitacion> listaCat = new ArrayList<>();
-        String query_sql = "SELECT * FROM habitaciones";
+        String query_sql = "SELECT * FROM habitacion";
         try{
             //Conexion a la BD
             Connection conn = Conection.conexion();
