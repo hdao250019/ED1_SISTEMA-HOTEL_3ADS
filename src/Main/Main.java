@@ -14,11 +14,12 @@ import javax.swing.JFrame;
  */
 public class Main {
     public static void main(String[] args) {
-        FrmInicioSesion loginView = new FrmInicioSesion();
+        
         //FrmNuevoU ventana = new FrmNuevoUsuario();
-        JFrame menu = new JFrame();
+        FrmHabitaciones menu = new FrmHabitaciones();
         UsuarioDB usuariobd = new UsuarioDB();
         
+        FrmInicioSesion loginView = new FrmInicioSesion();
         UsuarioController control = new UsuarioController(loginView, usuariobd, menu);
         loginView.setVisible(true);
     }

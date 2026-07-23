@@ -56,7 +56,7 @@ public class UsuarioController implements ActionListener{
         if (usuarioValidado != null) {
             
             //SesionAct.setUsuarioActual(usuarioValidado);
-            //JOptionPane.showMessageDialog(vistaLogin, "¡Bienvenido de nuevo, " + usuarioValidado.getNombre(), "!");
+            JOptionPane.showMessageDialog(vistaLogin, "¡Bienvenido de nuevo, " + usuarioValidado.getNombre() + "!", "Administrador", JOptionPane.INFORMATION_MESSAGE);
 
             
             menu.setLocationRelativeTo(null);
