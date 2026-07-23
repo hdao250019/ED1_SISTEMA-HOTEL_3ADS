@@ -21,6 +21,8 @@ public class UsuarioController implements ActionListener{
     private JFrame menu;
     private int contadorLogin = 0;
     
+    //Cambio hab.
+    
 
     // Constructor
     public UsuarioController(FrmInicioSesion vistaLogin, UsuarioDB usuariobd, JFrame menu) {
