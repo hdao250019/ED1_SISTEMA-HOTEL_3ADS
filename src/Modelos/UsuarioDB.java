@@ -17,7 +17,7 @@ public class UsuarioDB {
     
     public Usuario login(String usuario, String contrasenia) {
         // Buscamos un registro que coincida con ambos datos
-        String query_sql = "SELECT * FROM usuarios WHERE usuario = ? AND contraseña = ?";
+        String query_sql = "SELECT * FROM user WHERE correo = ? AND contrasena = ?";
     
     try {
         Connection conn = Conection.conexion();
