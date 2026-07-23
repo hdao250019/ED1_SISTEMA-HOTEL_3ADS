@@ -18,23 +18,21 @@ public class Usuario {
         this.rol = rol;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setCorreo(String correo) {
-        this.mail = mail;
+    public String getMail() {
+        return mail;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public String getPass() {
+        return pass;
     }
 
-    public void setRol(String rol) {
-        this.rol = rol;
+    public String getRol() {
+        return rol;
     }
+
     
-    public boolean validarLogin(String correoLogin, String passLogin){
-        return mail.equals(correoLogin) && pass.equals(passLogin);
-    }
 }
