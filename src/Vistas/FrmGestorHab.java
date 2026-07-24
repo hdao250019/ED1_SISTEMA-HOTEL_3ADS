@@ -44,10 +44,9 @@ public class FrmGestorHab extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         CBX_DispS = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
-        TXT_EstadoH = new javax.swing.JTextField();
-        BTN_ACT = new javax.swing.JButton();
-        BTN_ELI = new javax.swing.JButton();
-        BTN_Limp = new javax.swing.JButton();
+        BTN_Act = new javax.swing.JButton();
+        BTN_Eli = new javax.swing.JButton();
+        BTN_Lim = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         TXT_NumH = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -56,12 +55,13 @@ public class FrmGestorHab extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
+        CHK_Disp = new javax.swing.JCheckBox();
         jPanel4 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(75, 44, 47));
 
@@ -187,32 +187,28 @@ public class FrmGestorHab extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(75, 44, 47));
         jLabel7.setText("Estado de la Habitación: (Dispónible / Ocupada)");
 
-        TXT_EstadoH.setBackground(new java.awt.Color(249, 224, 210));
-        TXT_EstadoH.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        TXT_EstadoH.setBorder(null);
+        BTN_Act.setBackground(new java.awt.Color(181, 92, 58));
+        BTN_Act.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BTN_Act.setForeground(new java.awt.Color(249, 224, 210));
+        BTN_Act.setText("ACTUALIZAR");
 
-        BTN_ACT.setBackground(new java.awt.Color(181, 92, 58));
-        BTN_ACT.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        BTN_ACT.setForeground(new java.awt.Color(249, 224, 210));
-        BTN_ACT.setText("ACTUALIZAR");
-
-        BTN_ELI.setBackground(new java.awt.Color(181, 92, 58));
-        BTN_ELI.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        BTN_ELI.setForeground(new java.awt.Color(249, 224, 210));
-        BTN_ELI.setText("ELIMINAR");
-        BTN_ELI.addActionListener(new java.awt.event.ActionListener() {
+        BTN_Eli.setBackground(new java.awt.Color(181, 92, 58));
+        BTN_Eli.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BTN_Eli.setForeground(new java.awt.Color(249, 224, 210));
+        BTN_Eli.setText("ELIMINAR");
+        BTN_Eli.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTN_ELIActionPerformed(evt);
+                BTN_EliActionPerformed(evt);
             }
         });
 
-        BTN_Limp.setBackground(new java.awt.Color(181, 92, 58));
-        BTN_Limp.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        BTN_Limp.setForeground(new java.awt.Color(249, 224, 210));
-        BTN_Limp.setText("LIMPIAR");
-        BTN_Limp.addActionListener(new java.awt.event.ActionListener() {
+        BTN_Lim.setBackground(new java.awt.Color(181, 92, 58));
+        BTN_Lim.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BTN_Lim.setForeground(new java.awt.Color(249, 224, 210));
+        BTN_Lim.setText("LIMPIAR");
+        BTN_Lim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTN_LimpActionPerformed(evt);
+                BTN_LimActionPerformed(evt);
             }
         });
 
@@ -248,6 +244,8 @@ public class FrmGestorHab extends javax.swing.JFrame {
 
         jSeparator3.setForeground(new java.awt.Color(75, 44, 47));
 
+        CHK_Disp.setText("Disponible");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -261,15 +259,13 @@ public class FrmGestorHab extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(TXT_EstadoH, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING))
+                                        .addComponent(jLabel6)
                                         .addGap(0, 0, Short.MAX_VALUE))
                                     .addGroup(jPanel3Layout.createSequentialGroup()
                                         .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(BTN_ACT)
+                                        .addComponent(BTN_Act)
                                         .addGap(146, 146, 146)
-                                        .addComponent(BTN_ELI)))
+                                        .addComponent(BTN_Eli)))
                                 .addGap(84, 84, 84)))
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
@@ -282,7 +278,7 @@ public class FrmGestorHab extends javax.swing.JFrame {
                                     .addComponent(jLabel4)))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(43, 43, 43)
-                                .addComponent(BTN_Limp)))
+                                .addComponent(BTN_Lim)))
                         .addGap(88, 88, 88))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(CBX_DispS, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -302,6 +298,10 @@ public class FrmGestorHab extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(SCR_Habi, javax.swing.GroupLayout.PREFERRED_SIZE, 864, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(CHK_Disp)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -332,15 +332,15 @@ public class FrmGestorHab extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jSeparator2)
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(68, 68, 68)
-                .addComponent(TXT_EstadoH, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(40, 40, 40)
+                .addComponent(CHK_Disp)
+                .addGap(59, 59, 59)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(55, 55, 55)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BTN_ACT)
-                    .addComponent(BTN_ELI)
-                    .addComponent(BTN_Limp))
+                    .addComponent(BTN_Act)
+                    .addComponent(BTN_Eli)
+                    .addComponent(BTN_Lim))
                 .addGap(37, 37, 37)
                 .addComponent(SCR_Habi, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
                 .addGap(16, 16, 16))
@@ -425,13 +425,13 @@ public class FrmGestorHab extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TXT_MaxHActionPerformed
 
-    private void BTN_ELIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_ELIActionPerformed
+    private void BTN_EliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_EliActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BTN_ELIActionPerformed
+    }//GEN-LAST:event_BTN_EliActionPerformed
 
-    private void BTN_LimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_LimpActionPerformed
+    private void BTN_LimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_LimActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BTN_LimpActionPerformed
+    }//GEN-LAST:event_BTN_LimActionPerformed
 
     private void CBX_DispSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBX_DispSActionPerformed
         // TODO add your handling code here:
@@ -478,15 +478,15 @@ public class FrmGestorHab extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton BTN_ACT;
-    public javax.swing.JButton BTN_ELI;
+    public javax.swing.JButton BTN_Act;
+    public javax.swing.JButton BTN_Eli;
     private javax.swing.JButton BTN_GESTIONHABI;
-    public javax.swing.JButton BTN_Limp;
+    public javax.swing.JButton BTN_Lim;
     private javax.swing.JButton BTN_REGISTRO;
     public javax.swing.JComboBox<String> CBX_DispS;
     public static javax.swing.JComboBox<String> CBX_TipoH;
+    public javax.swing.JCheckBox CHK_Disp;
     public javax.swing.JScrollPane SCR_Habi;
-    public javax.swing.JTextField TXT_EstadoH;
     public javax.swing.JTextField TXT_MaxH;
     public javax.swing.JTextField TXT_NumH;
     private javax.swing.JLabel jLabel1;

@@ -172,6 +172,9 @@
             <Property name="text" type="java.lang.String" value="GESTI&#xd3;N DE HABITACIONES"/>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="BTN_HBI">
           <Properties>
@@ -508,8 +511,11 @@
         </Component>
         <Component class="javax.swing.JCheckBox" name="CHK_Disp">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jCheckBox1"/>
+            <Property name="text" type="java.lang.String" value="Disponible"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CHK_DispActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>

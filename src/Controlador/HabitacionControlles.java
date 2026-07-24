@@ -1,7 +1,7 @@
 
 package Controlador;
 
-import Conection.HabitacionBD;
+import Modelos.HabitacionBD;
 import Modelos.Habitacion;
 import Modelos.HabitacionBD;
 import Vistas.FrmGestorHab;
@@ -23,6 +23,7 @@ public class HabitacionControlles implements ActionListener {
     private HabitacionBD habitacionbd;
     private FrmGestorHab verHab;
     
+    
     public HabitacionControlles(FrmHabitaciones hab, HabitacionBD habitacionbd, FrmGestorHab verHab){
         this.hab = hab;
         this.habitacionbd = habitacionbd;
@@ -41,11 +42,24 @@ public class HabitacionControlles implements ActionListener {
         
     @Override
     public void actionPerformed(ActionEvent e) {
+        // Sin esta validacion java no encuentra la ventana por lo que marca error
+        if (this.hab != null && this.hab.BTN_Ingresar != null) {
+            if (e.getSource() == this.hab.BTN_Ingresar) {
+                
+                guardarHabitacion();
+            }
+        }
+         // Sin esta validacion java no encuentra la ventana por lo que marca error
+            if (e.getSource() == this.hab.BTN_GESTIONHABI) {
+                
+            }
         
     }
     
     // Metodo para guardar Usuarios
     private void guardarHabitacion(){
+        
+       
         
         // Obtener los datos desde la ventana
         int numHab = Integer.parseInt(hab.TXT_NumH.getText());
@@ -117,9 +131,13 @@ public class HabitacionControlles implements ActionListener {
         //Crear tabla
         JTable tablaUser = new JTable(modelo);
         // Usar JScrollpane para mostrar la tabla
-        hab.SCR_Habi.setViewportView(tablaUser);
+        verHab.SCR_Habi.setViewportView(tablaUser);
         
     }
+    
+    // Método para ir a gestion usuario
+    
+    
     
     // Metodo para limpiar campos de Usuarios
     private void LimpiarCampos(){

@@ -233,7 +233,12 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
         jSeparator3.setForeground(new java.awt.Color(75, 44, 47));
 
-        CHK_Disp.setText("jCheckBox1");
+        CHK_Disp.setText("Disponible");
+        CHK_Disp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CHK_DispActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -331,6 +336,10 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CBX_DispSActionPerformed
 
+    private void CHK_DispActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CHK_DispActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CHK_DispActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -368,7 +377,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BTN_GESTIONHABI;
+    public javax.swing.JButton BTN_GESTIONHABI;
     private javax.swing.JButton BTN_HBI;
     public javax.swing.JButton BTN_Ingresar;
     public javax.swing.JComboBox<String> CBX_DispS;

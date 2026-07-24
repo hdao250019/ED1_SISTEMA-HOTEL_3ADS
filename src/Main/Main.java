@@ -18,9 +18,13 @@ public class Main {
         //FrmNuevoU ventana = new FrmNuevoUsuario();
         FrmHabitaciones menu = new FrmHabitaciones();
         UsuarioDB usuariobd = new UsuarioDB();
+        FrmGestorHab verHab = new FrmGestorHab();
+        HabitacionBD habitacionbd = new HabitacionBD();
         
         FrmInicioSesion loginView = new FrmInicioSesion();
-        UsuarioController control = new UsuarioController(loginView, usuariobd, menu);
+        UsuarioController control = new UsuarioController(loginView, usuariobd, menu, verHab);
+        GestionHabController controller = new GestionHabController(verHab, habitacionbd);
+        HabitacionControlles habitacion = new HabitacionControlles(menu, habitacionbd, verHab);
         loginView.setVisible(true);
     }
 }

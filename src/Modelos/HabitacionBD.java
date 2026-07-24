@@ -5,7 +5,9 @@
 package Modelos;
 
 import Controlador.Conection;
+import Controlador.GestionHabController;
 import Modelos.Habitacion;
+import Vistas.FrmGestorHab;
 import java.sql.Connection;
 import java.sql.*;
 import java.util.ArrayList;
@@ -18,7 +20,7 @@ import java.util.List;
 public class HabitacionBD {
     
     public boolean insertar(Habitacion habitacion){
-        String sql_query = "INSERT INTO habitacion(num_habitacion, max_huespedes, tipo, dispo_servicios, estado) VALUES(?, ?, ?, ?)";
+        String sql_query = "INSERT INTO habitacion(num_habitacion, max_huespedes, tipo, dispo_servicios, estado) VALUES(?, ?, ?, ?, ?)";
         
         try{
             //Conexion a la BD
@@ -94,6 +96,7 @@ public class HabitacionBD {
             stmt.setString(4, habitacion.getDispHab());
             stmt.setBoolean(5, habitacion.isEstado());
               
+            stmt.setInt(6, habitacion.getId());
               // Verificar el numero de filas que cambiaron 
               int filas_cambiadas = stmt.executeUpdate();
               
@@ -132,4 +135,5 @@ public class HabitacionBD {
         }
             
         }
+    
 }

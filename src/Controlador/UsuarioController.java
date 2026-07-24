@@ -19,16 +19,18 @@ public class UsuarioController implements ActionListener{
     private FrmInicioSesion vistaLogin;
     private UsuarioDB usuariobd;
     private JFrame menu;
+    private FrmGestorHab habo;
     private int contadorLogin = 0;
     
     //Cambio hab.
     
 
     // Constructor
-    public UsuarioController(FrmInicioSesion vistaLogin, UsuarioDB usuariobd, JFrame menu) {
+    public UsuarioController(FrmInicioSesion vistaLogin, UsuarioDB usuariobd, JFrame menu, FrmGestorHab habo) {
         this.vistaLogin = vistaLogin;
         this.usuariobd = usuariobd;
         this.menu = menu;
+        this.habo = habo;
         
         this.vistaLogin.btnIni.addActionListener(this);
     }
@@ -61,6 +63,8 @@ public class UsuarioController implements ActionListener{
             
             menu.setLocationRelativeTo(null);
             menu.setVisible(true);
+            
+            habo.setVisible(true);
             
             vistaLogin.dispose();
             
